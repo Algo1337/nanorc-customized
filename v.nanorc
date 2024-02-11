@@ -10,7 +10,7 @@ color green "\<(for|if|while|do|else|case|default|switch)\>"
 color yellow "\<((or)\>"
 color green "\<(and|and_eq|bitand|bitor|not|not_eq|or|or_eq|xor|xor_eq)\>"
 color brightmagenta "\<(goto|continue|break|return)\>"
-color brightcyan "^[[:space:]]*#[[:space:]]*(define|include|(un|ifn?)def|endif|el(if|se)|if|warning|error)"
+color brightcyan "^[[:space:]]*#[[:space:]]*(fn|pub)"
 color brightmagenta "'([^'\]|(\\["'abfnrtv\\]))'" "'\\(([0-3]?[0-7]{1,2}))'" "'\\x[0-9A-Fa-f]{1,2}'"
 
 ##
