@@ -1,0 +1,49 @@
+## Here is an example for C/C++.
+##
+syntax "V" "\.(V|v)$"
+magic "^(V) (source|program)"
+comment "//"
+color brightred "\<[A-Z_][0-9A-Z_]+\>"
+color red "\<(float|f64|i64|mut|double|bool|char|type|pub|fn|wchar_t|int|short|long|sizeof|enum|void|static|const|struct|union|typedef|extern|(un)?signed|inline)\>"
+color red "\<({|})\>"
+color green "\<(for|if|while|do|else|case|default|switch)\>"
+color yellow "\<((or)\>"
+color green "\<(and|and_eq|bitand|bitor|not|not_eq|or|or_eq|xor|xor_eq)\>"
+color brightmagenta "\<(goto|continue|break|return)\>"
+color brightcyan "^[[:space:]]*#[[:space:]]*(define|include|(un|ifn?)def|endif|el(if|se)|if|warning|error)"
+color brightmagenta "'([^'\]|(\\["'abfnrtv\\]))'" "'\\(([0-3]?[0-7]{1,2}))'" "'\\x[0-9A-Fa-f]{1,2}'"
+
+##
+## GCC builtins
+color blue "(import|as)__"
+
+#Operator Color
+color yellow "[.:;,+*|=!\%]" "<" ">" "/" "-" "&"
+
+#Parenthetical Color
+color magenta "[(){}]" "\[" "\]"
+
+
+##
+## String highlighting.  You will in general want your comments and
+## strings to come last, because syntax highlighting rules will be
+## applied in the order they are read in.
+color cyan "<[^= 	]*>" ""(\\.|[^"])*""
+##
+## This string is VERY resource intensive!
+#color cyan start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
+
+## printf-family format specifiers
+color yellow "%(\#|(0-+))?(hh|h|l|ll|q|L|j|z|Z|t)?[A-Za-z]" "%%"
+
+## Comment highlighting
+color brightblue "//.*"
+color brightblue start="/\*" end="\*/"
+
+# Highlighting for documentation comments
+color magenta "@param [a-zA-Z_][a-z0-9A-Z_]+"
+color magenta "@return"
+color magenta "@author.*"
+
+## Trailing whitespace
+color ,green "[[:space:]]+$"
