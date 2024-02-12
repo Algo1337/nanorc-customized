@@ -4,9 +4,9 @@ syntax "V" "\.v$"
 magic "v"
 comment "//"
 color brightred "\<[A-Z_][0-9A-Z_]+\>"
-color brightred "\<(i64|fn|pub|f84|int|string|(un)?signed|inline)\>"
+color brightred "\<(i64|struct|f84|int|mut|string|(un)?signed|inline)\>"
 color green "\<((s?size)|(char(16|32))|((u_?)?int(_fast|_least)?(8|16|32|64))|u?int(max|ptr))_t\>"
-color green "\<(class|namespace|template|public|protected|private|typename|this|friend|virtual|using|mutable|volatile|register|explicit)\>"
+color brightmagenta "\<(pub|fn|struct|enum|type)\>"
 color brightcyan "\<(for|if|while|do|else|case|default|match)\>"
 color brightred "\<(or|!)\>"
 color green "\<((const|dynamic|reinterpret|static)_cast)\>"
@@ -21,7 +21,7 @@ color brightmagenta "'([^'\]|(\\["'abfnrtv\\]))'" "'\\(([0-3]?[0-7]{1,2}))'" "'\
 color green "__attribute__[[:space:]]*\(\([^)]*\)\)" "__(aligned|asm|builtin|hidden|inline|packed|restrict|section|typeof|weak)__"
 
 #Operator Color
-color yellow "[.:;,+*|=!\%]" "<" ">" "/" "-" "&"
+color yellow "[.:;,+*|=!\%]" "@" "<" ">" "/" "-" "&"
 
 #Parenthetical Color
 color magenta "[(){}]" "\[" "\]"
