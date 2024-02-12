@@ -6,12 +6,11 @@ comment "//"
 color brightred "\<[A-Z_][0-9A-Z_]+\>"
 color brightred "\<(i64|f84|int|string)\>"
 color cyan "\<(fn|struct|enum|type|int|i64|float)\>"
-color brightred "\<(for|if|while|else|case|match|default)\>"
+color brightred "\<(for|if|while|else|case|match|default|continue|break|or|return)\>"
 color green "\<(mut|const|pub)\>"
 color yellow "\<(import|module)\>"
 color green "\<((const|dynamic|reinterpret|static)_cast)\>"
 color green "\<(lock|assert)\>"
-color blue "\<(continue|break|or|return)\>"
 color brightmagenta "'([^'\]|(\\["'abfnrtv\\]))'" "'\\(([0-3]?[0-7]{1,2}))'" "'\\x[0-9A-Fa-f]{1,2}'"
 
 ##
