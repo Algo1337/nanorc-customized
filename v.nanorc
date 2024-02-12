@@ -11,7 +11,7 @@ color yellow "import" "module"
 color brightcyan "for" "if" "while" "else" "case" "match" "default"
 color green "\<((const|dynamic|reinterpret|static)_cast)\>"
 color green "\<(lock|assert)\>"
-color blue "\<(or|continue|break|return)\>"
+color blue "\<(continue|break|return)\>"
 color brightmagenta "'([^'\]|(\\["'abfnrtv\\]))'" "'\\(([0-3]?[0-7]{1,2}))'" "'\\x[0-9A-Fa-f]{1,2}'"
 
 ##
@@ -19,7 +19,7 @@ color brightmagenta "'([^'\]|(\\["'abfnrtv\\]))'" "'\\(([0-3]?[0-7]{1,2}))'" "'\
 color green "__attribute__[[:space:]]*\(\([^)]*\)\)" "__(aligned|asm|builtin|hidden|inline|packed|restrict|section|typeof|weak)__"
 
 #Operator Color
-color yellow "[.:;,+*|=!\%]" "@" "<" ">" "/" "-" "&"
+color yellow "[.:;,+*|=!\%]" "@" "<" ">" "/" "-" "&" "or"
 
 #Parenthetical Color
 color magenta "[(){}]" "\[" "\]"
