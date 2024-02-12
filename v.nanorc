@@ -11,7 +11,7 @@ color yellow "import" "module"
 color brightcyan "for" "if" "while" "else" "case" "match" "default"
 color green "\<((const|dynamic|reinterpret|static)_cast)\>"
 color green "\<(lock|assert)\>"
-color brightmagenta "\<(continue|break|return)\>"
+color blue "\<(or|continue|break|return)\>"
 color brightmagenta "'([^'\]|(\\["'abfnrtv\\]))'" "'\\(([0-3]?[0-7]{1,2}))'" "'\\x[0-9A-Fa-f]{1,2}'"
 
 ##
